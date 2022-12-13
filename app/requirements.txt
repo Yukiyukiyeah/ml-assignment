@@ -1,2 +1,4 @@
 transformers[torch]==4.21.0
 sentencepiece==0.1.97
+uvicorn[standard]==0.20.0
+fastapi[all]==0.88.0
