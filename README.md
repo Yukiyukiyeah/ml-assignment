@@ -7,6 +7,27 @@ You should first fork this repository, and then send us the code or the url of y
 
 **Please do not submit any pull requests to this repository.**
 
+## Prerequisite
+Minikube, Kubenetes, Docker
+
+## Start Project
+Start Minikube
+```bash
+minikube start --cpus 4 --memory 6144MB
+```
+Create translation-service and translation-app deployment
+```bash
+kubectl apply -f k8s/deployment.yaml
+```
+To examine whether the service has successfuly starts, you can use
+```bash
+kubectl get pods
+kubectl logs -f deployment/translation-app
+```
+After the service completely starts, port forward to port 9527
+```bash
+kubectl port-forward service/translation-service 9527:8000
+```
 
 ## Delivery
 - **app/Dockerfile**: To generate an application image

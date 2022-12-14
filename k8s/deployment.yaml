@@ -28,7 +28,7 @@ spec:
     spec:
       containers:
         - name: test
-          image: test
-          imagePullPolicy: Never
+          image: yuki0703/translation:latest
+          # imagePullPolicy: 
           ports:
             - containerPort: 8000
